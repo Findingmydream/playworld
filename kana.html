@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かなと遊びましょう！</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('tiger.jpg') no-repeat center center fixed;
+      background-size: auto 100%;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background-color: #f1f8e9;
+    }
+
+    /* 귀여운 첫 번째 호랑이 캐릭터 이미지 */
+    .character {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      width: 250px;
+      height: auto;
+      animation: bounce 1s ease-in-out infinite alternate;
+    }
+
+    /* 귀여운 두 번째 호랑이 캐릭터 이미지 */
+    .character2 {
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      width: 250px;
+      height: auto;
+      animation: bounce 1s ease-in-out infinite alternate;
+    }
+
+    /* 캐릭터가 점프하는 애니메이션 */
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .container {
+      text-align: center;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px 60px;
+      border-radius: 20px;
+      width: 45%;
+      max-width: 700px;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffeb3b;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .play-button {
+      background-color: #ff9800;
+      color: white;
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .play-button:hover {
+      background-color: #ff5722;
+    }
+
+    .play-button:active {
+      background-color: #e64a19;
+    }
+
+    .options {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .options button {
+      background-color: #4caf50;
+      color: white;
+      font-size: 1.3rem;
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .options button:hover {
+      background-color: #388e3c;
+    }
+
+    .options button:active {
+      background-color: #2c6b2f;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .button-container button {
+      margin: 10px 0;
+      width: 250px;
+      height: 60px;
+      font-size: 1.2rem;
+      background-color: #ffeb3b;
+      color: #333;
+      border: none;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .button-container button:hover {
+      background-color: #ff9800;
+    }
+
+    .button-container button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <!-- 귀여운 첫 번째 호랑이 캐릭터 이미지 -->
+  <img src="cute-tiger.png" alt="Cute Tiger" class="character">
+
+  <!-- 귀여운 두 번째 호랑이 캐릭터 이미지 -->
+  <img src="cutetiger2.jpg" alt="Cute Tiger 2" class="character2">
+  
+  <div class="container">
+    <h1>始めまして！ かなです！</h1>
+    <button class="play-button" id="playButton">かなと遊びましょう！</button>
+
+    <div class="options" id="options">
+      <div class="button-container">
+        <button onclick="chooseOption('サップ')">かなとサップする</button>
+        <button onclick="chooseOption('電話する')">かなと電話する</button>
+        <button onclick="chooseOption('散歩する')">かなと散歩する</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const playButton = document.getElementById("playButton");
+    const options = document.getElementById("options");
+
+    // 버튼 클릭 시 선택지 표시
+    playButton.addEventListener("click", function() {
+      options.style.display = "block";
+      playButton.style.display = "none";  // "かなと遊びましょう！" 버튼 숨기기
+    });
+
+    // 옵션 선택 시 알림을 표시하는 함수
+    function chooseOption(option) {
+      alert("あなたは「かなと" + option + "」を選びました！");
+    }
+  </script>
+</body>
+</html>
