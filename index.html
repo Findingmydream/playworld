@@ -25,36 +25,6 @@
       background-color: #f1f8e9;
     }
 
-    /* 귀여운 첫 번째 호랑이 캐릭터 이미지 */
-    .character {
-      position: absolute;
-      bottom: 5%;
-      left: 5%;
-      width: 250px;
-      height: auto;
-      animation: bounce 1s ease-in-out infinite alternate;
-    }
-
-    /* 귀여운 두 번째 호랑이 캐릭터 이미지 */
-    .character2 {
-      position: absolute;
-      bottom: 5%;
-      right: 5%;
-      width: 250px;
-      height: auto;
-      animation: bounce 1s ease-in-out infinite alternate;
-    }
-
-    /* 캐릭터가 점프하는 애니메이션 */
-    @keyframes bounce {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-20px);
-      }
-    }
-
     .container {
       text-align: center;
       color: white;
@@ -148,37 +118,9 @@
     .button-container button:active {
       transform: scale(0.98);
     }
-
-    /* 반응형 디자인 */
-    @media (max-width: 768px) {
-      .container {
-        padding: 20px;
-        width: 90%;
-      }
-
-      .play-button {
-        font-size: 1.2rem;
-        padding: 12px 25px;
-      }
-
-      .options button {
-        font-size: 1.1rem;
-        padding: 10px 20px;
-      }
-
-      .character, .character2 {
-        width: 200px;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- 귀여운 첫 번째 호랑이 캐릭터 이미지 -->
-  <img src="cute-tiger.png" alt="Cute Tiger" class="character">
-
-  <!-- 귀여운 두 번째 호랑이 캐릭터 이미지 -->
-  <img src="cutetiger2.jpg" alt="Cute Tiger 2" class="character2">
-  
   <div class="container">
     <h1>始めまして！ かなです！</h1>
     <button class="play-button" id="playButton">かなと遊びましょう！</button>
