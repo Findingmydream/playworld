@@ -61,7 +61,7 @@
       background-color: rgba(0, 0, 0, 0.6);
       padding: 40px 60px;
       border-radius: 20px;
-      width: 45%;
+      width: 80%;
       max-width: 700px;
       position: relative;
       z-index: 10;
@@ -147,6 +147,28 @@
 
     .button-container button:active {
       transform: scale(0.98);
+    }
+
+    /* 반응형 디자인 */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+        width: 90%;
+      }
+
+      .play-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+      }
+
+      .options button {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+      }
+
+      .character, .character2 {
+        width: 200px;
+      }
     }
   </style>
 </head>
